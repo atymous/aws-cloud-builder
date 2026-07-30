@@ -1,15 +1,19 @@
+import missions from "../data/missions";
+
 function ScenarioScreen({ onStartMission }) {
+
+    const mission = missions[0];
+
   return (
     <div>
-      <h1>🎴 Choose Your Mission</h1>
+      <h1>{mission.title}</h1>
 
-      <p>
-        Your first challenge is waiting...
-      </p>
+      <p>{mission.description}</p>
 
       <button onClick={onStartMission}>
-        Reveal Mission
+        Start Mission
       </button>
+      
     </div>
   );
 }

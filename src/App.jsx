@@ -5,6 +5,8 @@ import ScenarioScreen from "./components/ScenarioScreen";
 function App() {
 
   const [screen, setScreen] = useState("landing");
+
+  // prop 1
   if (screen === "landing") {
     return (
       <LandingScreen
@@ -13,6 +15,7 @@ function App() {
     );
   }
 
+  // prop 2
   if (screen == "scenario") {
     return (
       <ScenarioScreen
@@ -21,6 +24,8 @@ function App() {
     );
   }
   
+  //prop 3
+  if (screen )
   return (
     <div>
       <h1> ☁︎ Game Screen </h1>
