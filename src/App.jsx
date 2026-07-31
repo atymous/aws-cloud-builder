@@ -22,7 +22,7 @@ function App() {
     return (
       <ScenarioScreen
         onSelectMission={(mission) => {
-          setSelectedMission=(mission);
+          setSelectedMission(mission);
           setScreen("game");
         }}
       />
