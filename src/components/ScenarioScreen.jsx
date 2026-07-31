@@ -1,19 +1,22 @@
 import missions from "../data/missions";
+import MissionCard from "./MissionCard";
 
-function ScenarioScreen({ onStartMission }) {
+function ScenarioScreen({ onSelectMission }) {
 
-    const mission = missions[0];
+    // const mission = missions[0];
 
   return (
     <div>
-      <h1>{mission.title}</h1>
-
-      <p>{mission.description}</p>
-
-      <button onClick={onStartMission}>
-        Start Mission
-      </button>
-      
+        <h1>Choose Your Mission</h1>
+        <div className="mission-list">
+            {missions.map((mission) => (
+                <MissionCard
+                    key={mission.id}
+                    mission={mission}
+                    onSelectMission={onSelectMission}
+                 />
+            ))}
+        </div>
     </div>
   );
 }

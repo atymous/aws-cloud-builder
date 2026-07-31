@@ -4,7 +4,9 @@ import ScenarioScreen from "./components/ScenarioScreen";
 
 function App() {
 
+  // state variables
   const [screen, setScreen] = useState("landing");
+  const [selectedMission, setSelectedMission] = useState(null);
 
   // prop 1
   if (screen === "landing") {
@@ -19,7 +21,10 @@ function App() {
   if (screen == "scenario") {
     return (
       <ScenarioScreen
-        onStartMission={() => setScreen("game")}
+        onSelectMission={(mission) => {
+          setSelectedMission={mission};
+          setScreen("game");
+        }}
       />
     );
   }
